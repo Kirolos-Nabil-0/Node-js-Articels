@@ -34,8 +34,10 @@ app.get('/home', (req, res) =>  {
   res.render('index')
 }
 )
+app.get('/add-new-article', (req, res) =>  {
+  res.render('add-new-article')
 
-
+})
 
 //if pge is not found
 app.get('*', (req, res) =>  {

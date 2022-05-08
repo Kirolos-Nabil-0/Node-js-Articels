@@ -23,7 +23,11 @@
   </head>
   <body id="body">
     <header class="myheader">
-      <h1>K&K</h1>
+      <h1>
+        
+      <a style="all:unset"  href="/" >  K&K </a>
+      
+      </h1>
 
       <nav>
         <ul class="parent">
@@ -32,7 +36,7 @@
               ALL Articels
             </a>
           </li>
-          <li><a href="/add-new-article"  > Add new article </a></li>
+          <li><a href="/new-article"> Add new article </a></li>
           <li id="dark" class="mode">change mode</li>
           <li><a href=""> Support Us </a></li>
         </ul>
@@ -42,40 +46,32 @@
     <div id="mydiv"></div>
 
     <main id="main">
+
       <section>
-        <h1>Trending Articles &#128293;</h1>
-        <div class="parent-of-articles">
-          <article>
-            <h2>BackEnd</h2>
+        <h1>
+          create new article
+        </h1>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <form action="/new-article" method="POST">
+          <label for="title">
+           Article title
+          </label>
+          <input type="text" name="title" id="title" required />
 
-              <a href="/####" class="btn"> Show more </a>
-            </p>
-          </article>
+          <label for="summary" >
+            Article summary
+          </label>
+          <input type="text" name="summary" id="summary" required />
+          
+          <label for="body">
+            Article body
+          </label>
+          <textarea name="content" id="body" cols="30" rows="10" required ></textarea>
 
-          <article>
-            <h2>BackEnd</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-              <a href="/####" class="btn"> Show more </a>
-            </p>
-          </article>
-
-          <article>
-            <h2>BackEnd</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-              <a href="/####" class="btn"> Show more </a>
-            </p>
-          </article>
-        </div>
+          <button class="create">create</button>
+         
       </section>
+
 
       <section>
         <h1 dir="rtl">K&K 😍</h1>

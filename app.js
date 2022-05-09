@@ -20,8 +20,7 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 }); 
 
-
-
+ 
 
 app.use(express.static('public'))
 app.get('/', (req, res) =>  {
@@ -50,3 +49,15 @@ app.get('*', (req, res) =>  {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+// Mongos connection
+
+const mongoose = require('mongoose');
+ 
+mongoose.connect("mongodb+srv://kirolos:kirolos00k1k@cluster0.euzfi.mongodb.net/all-data?retryWrites=true&w=majority")
+  .then( result => {
+    app.listen(3000);
+  })
+  .catch( err => {
+    console.log(err);
+  }); 
